@@ -43,7 +43,9 @@ body{
     font-weight: 400;
 }
 
-.menu-items span{
+.menu-items a{
+    text-decoration: none;
+    color: black;
     margin: 8px;
 }
 
@@ -99,19 +101,12 @@ body{
     align-items: center;
     padding: 30px;
     flex-direction: column;
-}
-
-.headers-container h1{
-    font-family: 'Public Sans', sans-serif;
-    font-size: 100px;
-    font-weight: 900;
-    color: rgba(0, 0, 0, 0.04);
-    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 .headers-container h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     color: black;
     position: absolute;
@@ -129,24 +124,49 @@ body{
     margin-top: 20px;
 }
 
-@media screen and (max-width: 850px){
-    .headers-container h1{
-        display: none;
-    }
-    .headers-container{
-        margin-top: 20px;
-    }
-    .headers-container h2{
-        font-size: 20px;
-        letter-spacing: 6px;
-    }
+
+.products-container{
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-@media screen and (min-width: 850px){
-    .underline{
-        display: none;
-    }
+.image-container{
+    width: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 30px;
 }
+
+.image-container p{
+    font-family: 'Caveat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-shape {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px; /* Você pode ajustar esse valor para controlar o arredondamento dos cantos */
+    overflow: hidden;
+    position: relative;
+}
+
+.image-shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .footer{
     background-color: #FFFFFF;
@@ -160,9 +180,28 @@ body{
     height: 40px;
     padding: 5px 20px;
     margin-top: auto;
+    z-index: 10;
 }
 
 .footer p{
     font-family: 'Caveat', sans-serif;
     font-weight: 700;
+}
+
+.chat-toggle{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #F8FAFB;
+    border-radius: 50%;
+    z-index: 11;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.50);
+    border: none;
+}
+
+.chat-toggle:hover{
+    background-color: #fa3164;
 }
